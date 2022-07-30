@@ -1,0 +1,51 @@
+body {
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* 触发器 */
+.context-menu-trigger {
+  width: 200px;
+  height: 200px;
+  background-color: #b8b8f0;
+  border-radius: 6px;
+  box-shadow: 0 0 30px #c9c9e4;
+}
+/* 变量 */
+.context-menu-list {
+  --context-menu-bg-color: #b8b8f0;
+  --context-menu-shadow-color: #9595cb;
+  --context-menu-text-color: #000000;
+  --context-menu-hover-text-color: #0000ff;
+  --context-menu-border-color: #a8a8f4;
+}
+/* 菜单 */
+.context-menu-item,
+.context-menu-list {
+  background-color: var(--context-menu-bg-color);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--context-menu-text-color);
+}
+.context-menu-list {
+  border: unset;
+  overflow: hidden;
+  padding: 6px 0;
+  box-shadow: 0 0 15px var(--context-menu-shadow-color);
+}
+.context-menu-item {
+  padding: 6px 10px;
+  transition: .3s ease;
+}
+.context-menu-item:hover {
+  background-color: unset;
+  color: var(--context-menu-hover-text-color);
+  padding-left: 16px;
+}
+.context-menu-list .context-menu-item:not(:last-child) {
+  border-bottom: 1px solid var(--context-menu-border-color);
+}
